@@ -5,7 +5,6 @@ import random
 
 try:
     n = int(raw_input('How many numbers would you like? \n'))
-    print ''
 
 except:
     print 'Please enter a valid number'
