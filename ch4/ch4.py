@@ -60,7 +60,6 @@ print random.choice(t)
 print math
 
 # signal_power and noise_power must first be defined
-import math
 signal_power = 2
 noise_power = 1
 ratio = signal_power / noise_power
@@ -90,3 +89,23 @@ def the_repeater():
     print_lyrics()
     print_lyrics()
 
+the_repeater()
+
+# A function that prints anything you type in twice, this one is like
+# the_repeater() but it takes in a single parameter where the_repeater()
+# takes no parameters.
+def print_twice(a):
+    print a
+    print a
+    
+print_twice('steve')
+print_twice(math.pi)
+
+# An example of composition of a function
+print_twice('Steven ' * 4)
+print_twice(math.cos(math.pi))
+
+x = math.cos(radians)
+print x
+golden = (math.sqrt(5) + 1) / 2
+print golden
