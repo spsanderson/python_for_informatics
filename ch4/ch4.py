@@ -49,4 +49,30 @@ def addtwo(a,b):
 x = addtwo(3,5)
 print x
 
+# Getting an item from a list at random
+import random
+t = [1, 2, 3]
+print random.choice(t)
+
+# Some math functions. First we have to import math so that python
+# can make use of the math functions, math was already imported from 
+# above.
+print math
+
+# signal_power and noise_power must first be defined
+import math
+signal_power = 2
+noise_power = 1
+ratio = signal_power / noise_power
+decibals = 10 * math.log10(ratio)
+radians = 0.7
+height = math.sin(radians)
+
+degrees = 45
+radians = degrees / 360.0 * 2 * math.pi 
+math.sin(radians)
+print "Ratio = " + str(ratio)
+print "Decibals = " + str(decibals)
+print "Height = " + str(height)
+print "Sine of radians = " + str(math.sin(radians))
 
