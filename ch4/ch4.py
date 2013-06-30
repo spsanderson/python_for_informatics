@@ -75,4 +75,15 @@ print "Ratio = " + str(ratio)
 print "Decibals = " + str(decibals)
 print "Height = " + str(height)
 print "Sine of radians = " + str(math.sin(radians))
+print""
+
+# Defining a function
+def print_lyrics():
+    print "I'm a lumberjack, and I'm okay."
+    print "I sleep all night and I work all day."
+    
+print_lyrics()
+
+# Calling a function inside a function, we wil call this one, 
+# the_repeater()
 
