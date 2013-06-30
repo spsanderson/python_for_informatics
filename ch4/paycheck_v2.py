@@ -1,5 +1,6 @@
+# Define a function called computepay
 def computepay(r, h):
-    print "In computepay", h, r
+    print "In computepay function", h, r
     if hours_worked <= 40:
         p = h * r
     else:
@@ -28,6 +29,7 @@ else:
     pay = rate_round * 40 + (rate_round * 1.5 * (hours_worked - 40))
 print 'Your pay is ' + str(pay)
 
-print "In the main code", rate_per_hr, hours_worked
-pay = computepay(rate_per_hr, hours_worked)
+print "The rate and hours in try/except code", rate_per_hr, hours_worked
+pay = computepay(hours_worked, rate_per_hr)
 print "We are back", pay
+
