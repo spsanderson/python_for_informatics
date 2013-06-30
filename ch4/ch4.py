@@ -86,4 +86,7 @@ print_lyrics()
 
 # Calling a function inside a function, we wil call this one, 
 # the_repeater()
+def the_repeater():
+    print_lyrics()
+    print_lyrics()
 
