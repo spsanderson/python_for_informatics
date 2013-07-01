@@ -9,7 +9,7 @@ except:
     print 'Please enter a number between 0.0 and 1.0'
     quit()
 
-if inp > 1.0:
+if inp > 1.0 or inp < 0.0:
     print 'Please enter a number between 0.0 and 1.0'
 elif 1.0 >= inp >= 0.9:
     print 'A'

@@ -4,7 +4,7 @@
 # >= 0.9 A; 80 <= x < 90 B etc
 
 def computegrade(score):
-    if score > 1.0:
+    if score > 1.0 or score < 0.0:
         print 'Please enter a number between 0.0 and 1.0'
     elif 1.0 >= score >= 0.9:
         print 'A'
@@ -14,8 +14,6 @@ def computegrade(score):
         print 'C'
     elif 0.6 <= score < 0.7:
         print 'D'
-    elif score < 0.0:
-        print 'Please enter a number between 0.0 and 1.0'
     else:
         print 'F'
     
