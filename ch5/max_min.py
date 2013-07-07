@@ -17,15 +17,13 @@ while True:
     # The numbers for count, largest and smallest
     count = count + 1
     # Gets largest number
-    for i in inp:
-        if largest is None or i > largest:
-            largest = i
+    if largest is None or num > largest:
+        largest = num
         #print 'Loop:', i, largest <-- used for testing
     print 'Largest',largest
     # Gets smallest number
-    for i in inp:
-        if smallest is None or i < smallest:
-            smallest = i
+    if smallest is None or num < smallest:
+        smallest = num
         #print 'Loop:', i, smallest <-- used for testing
     print 'Smallest', smallest
     
