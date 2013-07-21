@@ -61,4 +61,13 @@ def count(string, letter):
             count = count + 1
     print count
 
+# The `in` operator
+'a' in 'banana'
 
+def alpha(string):
+    if string < 'banana':
+        print 'Your word,' + string + ', comes before banana'
+    elif string > 'banana':
+        print 'Your word,' + string + ', comes after banana'
+    else:
+        print 'All right, bananas'
