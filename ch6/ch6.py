@@ -54,3 +54,11 @@ for letter in word:
         count = count + 1
 print 'There are ' +str(count) + ' a(s) in',word
 
+def count(string, letter):
+    count = 0
+    for i in string:
+        if i == letter:
+            count = count + 1
+    print count
+
+
