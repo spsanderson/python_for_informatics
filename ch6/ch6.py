@@ -53,3 +53,4 @@ for letter in word:
     if letter == 'a':
         count = count + 1
 print 'There are ' +str(count) + ' a(s) in',word
+
