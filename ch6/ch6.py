@@ -66,8 +66,8 @@ def count(string, letter):
 
 def alpha(string):
     if string < 'banana':
-        print 'Your word,' + string + ', comes before banana'
+        print 'Your word, ' + string + ', comes before banana'
     elif string > 'banana':
-        print 'Your word,' + string + ', comes after banana'
+        print 'Your word, ' + string + ', comes after banana'
     else:
         print 'All right, bananas'
