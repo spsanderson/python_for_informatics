@@ -43,3 +43,13 @@ print fruit[3:] # the print just forces output to screen
 print fruit[3:3] # nothing will print with this
 print fruit[:] # this is the same as `print fruit`
 
+greeting = 'Hello World!'
+new_greeting = 'J' + greeting[1:]
+print new_greeting
+
+word = 'banana'
+count = 0
+for letter in word:
+    if letter == 'a':
+        count = count + 1
+print 'There are ' +str(count) + ' a(s) in',word
