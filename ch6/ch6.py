@@ -71,3 +71,21 @@ def alpha(string):
         print 'Your word, ' + string + ', comes after banana'
     else:
         print 'All right, bananas'
+
+'a' in 'banana'
+# The above will print True to the screen
+
+stuff = 'Hello world'
+print type(stuff)
+print dir(stuff)
+
+word = 'banana'
+new_word = word.upper()
+print new_word
+index = word.find('a')
+print index
+index_2 = word.find('na')
+print index_2
+index_3 = word.find('na', 3)
+print index_3
+
