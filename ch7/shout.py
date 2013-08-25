@@ -7,9 +7,13 @@ HERE IS SOME EXAMPLE TEXT
 THAT WILL BE PRINTED OUT 
 WHEN THIS PROGRAM IS RUN
 '''
-fhand = raw_input('Enter the file name: ')
+fname = raw_input('Enter the file name: ')
 try:
-    fname = open(fhand)
+    fhand = open(fname)
 except:
-    print 'The file'fhand,'does not exist or could not be opened'
+    print 'The file',fhand,'does not exist or could not be opened'
     exit()
+    
+for line in fhand:
+    line = line.upper().rstrip()
+    print line
