@@ -72,3 +72,13 @@ for line in fhand:
         count = count + 1
 print 'There were',count,'subject lines in',fname
 
+# Now we will construct a block of code to do the same exact thing
+# only now we will use a try/except block incase a user inputs a file
+# that does not exist in the cwd (current working directory)
+fname = raw_input('Enter the file name: ')
+try:
+    fhand = open(fname)
+except:
+    print 'The file:',fname,', could not be found or opened'
+    exit()
+    
