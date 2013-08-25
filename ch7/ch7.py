@@ -87,3 +87,7 @@ for line in fhand:
         count = count + 1
 print 'There were',count,'subject lines in',fname
 
+# Writing files with 'w' we will use fout = file out. If the file 
+# already exists then be careful because you will overwrite it
+fout = open('output.txt','w')
+print fout
