@@ -89,3 +89,45 @@ print index_2
 index_3 = word.find('na', 3)
 print index_3
 
+# Stripping out white space
+line = ' Here we go '
+print line
+print line.strip()
+
+# Startswith method
+line = 'Please have a nice day'
+print line
+print line.startswith('Please')
+print line.startswith('p')
+
+# use of line.lower() and use of a mutli method call
+line = 'Please have a nice day'
+print line.startswith('p')
+print line.lower()
+print line.lower().startswith('p')
+
+word = 'banana'
+print word.count('a')
+
+data = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+atpos = data.find('@')
+print atpos
+sppos = data.find(' ',atpos)
+print sppos
+host = data[atpos+1:sppos]
+print host
+
+# Format operations
+camels = 42
+print '%d' % camels
+print 'I have spotted %d camels.' % camels
+print 'In %d years I have spotted %g %s.' % (3, 0.1, 'camels')
+
+string = 'X-DSPAM-Confidence: 0.8475'
+s = string.find(' ')
+print s
+e = string.find('5')
+print e
+fnum = float(string[s+1:e+1])
+print fnum, type(fnum)
+
