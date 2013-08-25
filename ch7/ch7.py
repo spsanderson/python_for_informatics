@@ -81,4 +81,9 @@ try:
 except:
     print 'The file:',fname,', could not be found or opened'
     exit()
-    
+count = 0
+for line in fhand:
+    if line.startswith('Subject:'):
+        count = count + 1
+print 'There were',count,'subject lines in',fname
+
