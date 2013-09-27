@@ -162,3 +162,37 @@ T = list(S)
 print T
 T = S.split()
 print T
+
+# We can use line.split() to get parts of lines in files as well
+'''
+The first variable created is fhand, this will hold the file that we 
+open using the open() command. Next we create a for loop that takes
+every line in fhand and rstrips the space off then says if the line does not
+start with 'From ' then skip it, but the ones that do start that way split
+the line which will split it into its parts and then select the 3rd word from
+every line, which is words[2] because we start at 0
+'''
+fhand = open('mbox-short.txt')
+for line in fhand:
+    line = line.rstrip()
+    if not line.startswith('From '):
+        continue
+    words = line.split()
+    print words[2]
+
+# This works because Python creates one string object that is reference by
+# two variables
+A = 'banana'
+B = 'banana'
+print A is B
+
+# The above does not work with lists, when a list is created it is a distinct
+# in python
+A = [1, 2, 3]
+B = [1, 2, 3]
+print A is B
+
+# To get around this sort of thing we can alias as follows
+A = [1, 2, 3]
+B = A
+print B is A
