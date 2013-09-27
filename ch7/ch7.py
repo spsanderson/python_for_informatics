@@ -91,3 +91,14 @@ print 'There were',count,'subject lines in',fname
 # already exists then be careful because you will overwrite it
 fout = open('output.txt','w')
 print fout
+
+line1 = 'this here"s the wattle, \n'
+fout.write(line1)
+
+line2 = 'the emblem of our land. \n'
+fout.write(line2)
+fout.close()
+
+s = '1 2\t 3 \n 4'
+print s
+print repr(s)
