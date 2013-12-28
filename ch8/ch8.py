@@ -196,3 +196,63 @@ print A is B
 A = [1, 2, 3]
 B = A
 print B is A
+
+# In general it's good to avoid aliasing
+B[0] = 17
+print A
+
+# This function will delete the first element of a list
+def delete_head(t):
+    del t[0]
+    
+# Here is an example of the function at work
+letters = ['a', 'b', 'c']
+delete_head(letters)
+print letters
+
+# appending something to a list
+t1 = [1, 2]
+t2 = t1.append(3)
+print t1
+print t2
+
+t3 = t1 + [3]
+print t3
+print t2 is t3
+
+# The following function does not actually delet the head of a list
+def bad_delete_head(t):
+    t = t[1:]
+'''
+The slice operator creates a new list and the assignment makes t refer
+to it, but none of that has any effect on the list that was passed as an
+argument.
+An alternative is to write a function that creates and returns a new 
+list. For example, tail returns all but the first element of a list
+'''
+def tail(t):
+    return t[1:]
+# The above function leaves the original list unmodified.
+letters = ['a', 'b', 'c']
+rest = tail(letters)
+print rest
+
+fhand = open('mbox-short.txt')
+count = 0
+for line in fhand:
+    words = line.split()
+    #print 'Debug:', words
+    if len(words) == 0:
+        continue
+    if words[0] != 'From':
+        continue
+    print words[2]
+
+fhand = open('mbox-short.txt')
+count = 0
+for line in fhand:
+    words = line.split()
+    #print 'Debug:', words
+    if len(words) > 0 and words[0] == 'From':
+        print words[2]
+    
